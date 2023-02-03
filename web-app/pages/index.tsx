@@ -32,6 +32,7 @@ export default function Home() {
   const getProviderOrSigner = async (needSigner = false) => {
     // Connect to Metamask
     // Since we store `web3Modal` as a reference, we need to access the `current` value to get access to the underlying object
+    // @ts-ignore
     const provider = await web3ModalRef.current.connect();
     const web3Provider = new providers.Web3Provider(provider);
 
@@ -116,6 +117,7 @@ export default function Home() {
         signer
       );
       // Get the address associated to the signer which is connected to  MetaMask
+      // @ts-ignore
       const address = await signer.getAddress();
       // call the whitelistedAddresses from the contract
       const _joinedWhitelist = await whitelistContract.whitelistedAddresses(
@@ -181,6 +183,7 @@ export default function Home() {
     if (!walletConnected) {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
+      // @ts-ignore
       web3ModalRef.current = new Web3Modal({
         network: "goerli",
         providerOptions: {},
