@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/Home.module.css";
+import { NFT_CONTRACT_ADDRESS } from "../constants";
 
 function index() {
   return (
@@ -21,6 +22,21 @@ function index() {
             where then they can mint NFTs, after sale is launched 🚀
             <br />
             (styles are ignored, I am good at them 😄)
+            <br />
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={`https://testnets.opensea.io/assets/goerli/${NFT_CONTRACT_ADDRESS}/1`}
+            >
+              OpenSea link
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/happylolonly/whitelist-nft-minting"
+            >
+              Code
+            </a>
           </div>
 
           <div>
