@@ -28,7 +28,7 @@ function index() {
               rel="noreferrer"
               href={`https://testnets.opensea.io/assets/goerli/${NFT_CONTRACT_ADDRESS}/1`}
             >
-              OpenSea link
+              OpenSea
             </a>
             <a
               target="_blank"
